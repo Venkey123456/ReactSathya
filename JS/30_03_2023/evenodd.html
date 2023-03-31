@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="number"/>
+    <button onclick="eo()">Even/Odd</button>
+    <p id="result"></p>
+    <script>
+        const eo = ()=>{
+            let numElement = document.getElementById("number")
+            let num = numElement.value
+            let res = document.getElementById("result")
+            num = parseInt(num);
+            if(num %2 == 0){
+                res.innerHTML = `Entered Number ${num} is Even`
+            }else{
+                res.innerHTML = `Entered Number ${num} is Odd`
+            }
+            numElement.value = ""
+        }
+    </script>
+</body>
+</html>

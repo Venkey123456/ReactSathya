@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="firstName">FirstName: </label>
+        <input id="firstName"/><br><br>
+        <label for="lastName">LastName: </label>
+        <input id="lastName" /><br><br>
+        <label for="roll">Roll No: </label>
+        <input id="roll" /><br><br>
+        <label for="batch">Batch: </label>
+        <input id="batch" /><br><br>
+        <label for="course">Course: </label>
+        <input id="course" /><br><br>
+        <button onclick="register()">Register</button>
+    </div>
+    <div id="status"></div>
+    <script>
+        const register = ()=>{
+            let fnameElement = document.getElementById("firstName")
+            let lnameElement = document.getElementById("lastName")
+            let rollElement = document.getElementById("roll")
+            let batchElement = document.getElementById("batch")
+            let courseElement = document.getElementById("course")
+
+            let status = document.getElementById("status")
+
+            let name = lnameElement.value + " " + fnameElement.value
+            let br = batchElement.value + "-" +rollElement.value
+            let c = courseElement.value
+
+            status.innerHTML = `Name: ${name}<br><br> Batch: ${br}<br><br> Course: ${c}`
+
+            fnameElement.value = ""
+            lnameElement.value = ""
+            rollElement.value = ""
+            batchElement.value = ""
+            courseElement.value = ""
+
+        }
+    </script>
+</body>
+</html>

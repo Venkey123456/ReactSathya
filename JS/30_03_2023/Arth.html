@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="input1">Input1: </label>
+    <input type="number" id="input1" />
+    <label for="input2">Input2: </label>
+    <input type="number" id="input2" />
+    <button onclick="cal('add')">Add</button>
+    <button onclick="cal('sub')">Sub</button>
+    <button onclick="cal('mul')">Mul</button>
+    <button onclick="cal('div')">Div</button>
+    <h3 id="status"></h3>
+    <script>
+        function cal(operation){
+            let i1 = document.getElementById("input1").value;
+            let i2 = document.getElementById("input2").value;
+            i1 = parseInt(i1);
+            i2 = parseInt(i2);
+            let status = document.getElementById("status");
+            switch(operation){
+                case 'add':
+                    status.innerHTML = `The sum of ${i1} and ${i2} is ${i1+i2}`;
+
+            }
+        }
+    </script>
+</body>
+</html>
